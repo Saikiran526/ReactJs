@@ -1,0 +1,97 @@
+body{
+    background-color: rgb(215, 236, 240);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+    /* max-width: 80%; */
+}
+.cantainer-search{
+    display: flex; 
+    align-items: center;
+    justify-content: center;  
+    /* width: 500px; */
+}
+.input-search{
+    height: 40px;
+    width: auto;
+    border-radius: 20px;
+    border:none ;
+    outline: none;
+    padding: 20px 20px;
+    font-size: 18px;
+    width: 500px;
+    margin-left: 50px;
+}
+.icon-search{
+    height: 40px;
+    width: 60px;
+    position: relative;
+    left: -60px;
+    top: 0px;
+    /* background-color: gray; */
+    border-radius: 20px;
+    border: none;
+    outline: none   ;
+    padding: 10px 20px;
+
+}
+.container { /* Changed from .cantainer to .container */
+    border: 1px solid black;
+    margin: 30px 20px;
+    padding: 0px 20px;
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: top;
+}
+
+/* Specific background images for different weather conditions */
+.bg-clear {
+    background-image: url('../images/clear.jpg');
+}
+
+.bg-rain {
+    background-image: url('../images/rain.jpg');
+}
+
+.bg-snow {
+    background-image: url('../images/snow.jpg');
+}
+
+.bg-clouds {
+    background-image: url('../images/clouds.jpg');
+}
+
+.bg-default { /* Fix the class selector */
+    background-image: url('../images/default.jpg');
+}
+
+.left {
+    justify-content: space-evenly;
+}
+.left .status{
+    /* justify-content: space-between; */
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.status p{
+    margin-left: 10px;
+}
+.right h1{
+    margin-bottom: 0px;
+}
+.right p{
+    margin-bottom: 5px;
+}
+.status{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: gray; */
+}
+.status p{
+    margin-bottom:0px ;
+}

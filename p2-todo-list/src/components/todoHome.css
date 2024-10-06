@@ -1,0 +1,119 @@
+body{
+    background-color: #43474d;
+    color: white;
+    /* overflow: hidden; */
+}
+
+h1{
+   text-align: center;
+   margin-top: 50px;
+}
+.cantainer{
+    background-color: #1f2124;
+    padding: 2% 2% 2% 4%;
+    max-width: 700px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-top: 50px; */
+    box-shadow: 0px 0px 10px #8ce6c8;
+
+}
+.todo-input{
+    display: flex;
+    border-bottom: 1px solid green;
+    padding-bottom: 30px;
+    /* width: 600px; */
+    /* margin-bottom: 20px; */
+}
+.todo-input label{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.todo-input-item{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px 30px 10px 0px;
+}
+.todo-input-item input{
+    padding: 10px 10px;
+    border: none;
+    width: 250px;
+}
+input{
+    outline: none;
+}
+input:hover{
+    outline: 2px solid #1ff5a6;;
+}
+.btn-add{
+    height: 36px;
+    background-color: #9ff5a6;
+    padding: 5px 30px;
+    cursor: pointer;
+    margin-top: 41px;
+    border: none;
+    margin-right: 30px;
+    outline: none;
+}
+.btn-add:hover{
+    background-color: #3f8661;
+}
+.btn-options{
+    height: 36px;
+    background-color: #43474d;
+    padding: 5px 30px;
+    cursor: pointer;
+    margin-top: 41px;
+    border: none;
+    color: white;
+    margin-bottom: 20px;
+    
+}
+.active{
+    background-color: #9ff5a6;
+    color: black;
+
+}
+.task-cantiner{
+    background-color:#43474d;
+    padding: 5px 30px;
+    display: flex;
+    justify-content: space-between;
+    /* width: 700px; */
+    margin-bottom: 10px;
+
+}
+.left h3{
+    margin: 2px 0px;
+    color:#9ff5a6 ;
+}
+.left p{
+    margin: 2px 0px;
+    font-size:12px ;
+    color: gray;
+}
+.right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-del{
+    height: 25px;
+    width: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.icon-done{
+    height: 25px;
+    width: 25px;
+    color: #27ee38;
+    cursor: pointer;
+}
+.icon-del:hover{
+    color: red;
+}
+.icon-done:hover{
+    color:  #27ee38;
+}
