@@ -4,9 +4,19 @@ body{
     justify-content: center;
     background-color: #bcd3f7;
 }
+
+.head{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    border-bottom:2px  solid black;
+}
 .conatiner{
     /* border: x solid black; */
-    flex-direction: column;
+    /* display: flex;
+    align-items: center;
+    flex-direction: column; */
     background-color: #95a7c4;
     margin-top: 50px;
     padding: 40px 40px ;
@@ -20,9 +30,8 @@ body{
     margin-top: 10px ;
     /* border: 1px solid black; */
     display: flex;
-    padding: 10px 10px;
+    padding: 10px 5%;
     border-radius: 10px;
-    cursor: pointer;
 }
 .person:hover{
     border: 1px solid black;
@@ -34,9 +43,12 @@ body{
     margin-bottom: 0px;
 
 }
+.heading{
+    margin-top: 0px;
+}
 
 .count{
-    margin: 5px;
+    margin: 5px 5px 20px 5px;
 }
 img{
     height: 100px;
@@ -59,4 +71,38 @@ img{
 }
 .btn-clear:hover{
     background-color: #bcd3f7;
+}
+.btn-remove-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 290px;
+}
+.btn-remove{
+    font-size: 13px;
+    border-radius: 5px;
+    background-color: #777f8c;   
+    padding: 3px 10px;
+    cursor: pointer;
+}
+.btn-remove:hover{
+    background-color: #bcd3f7;
+}
+
+@media (max-width:320px) {
+    .btn-remove-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 150px;
+    }
+    
+}
+@media (max-width:575px){
+    .btn-remove-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 200px;
+    }   
 }
