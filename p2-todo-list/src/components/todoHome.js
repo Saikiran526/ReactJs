@@ -17,27 +17,22 @@ export default function TodoHome() {
 
     const now=new Date();
     
-    useEffect(()=>{
-        let getData=JSON.parse(localStorage.getItem("task")) || [];
-        setTaskList(getData)
-        let getCompletedData=JSON.parse(localStorage.getItem("completedTask")) || [];
-        setCompletedList(getCompletedData);
-    },[])
+    useEffect(() => {
+        const getData = localStorage.getItem("todoList");
+        const parsedData = getData ? JSON.parse(getData) : [];    
+        setTaskList(parsedData);
+    }, []);
 
     useEffect(() => {
-        localStorage.setItem("task", JSON.stringify(taskList));
+        localStorage.setItem("todoList", JSON.stringify(taskList));
     }, [taskList]);
-    useEffect(() => {
-        localStorage.setItem("completedTask", JSON.stringify(completedList));
-    }, [completedList]);
+    
 
     function addNewTask() {
         if (title === '' || description === '')
             alert("Enter the Valid Input..!")
         else {
             setTaskList([...taskList, { title, description }])
-            // setTaskList(prevTasks => [...prevTasks, newTask]);
-            // localStorage.setItem("task",JSON.stringify([...taskList]))
             document.getElementsByTagName('input')[0].value = '';
             document.getElementsByTagName('input')[1].value = '';
             setTitle('')
@@ -50,6 +45,7 @@ export default function TodoHome() {
             });
             setOption(false);
         }
+        localStorage.setItem("todoList",taskList)
     }
 
     function deleteTask(currentIndex) {
@@ -74,8 +70,16 @@ export default function TodoHome() {
             let taskListCopy=[...taskList]
             taskListCopy.splice(currentIndex,1);
             setTaskList(taskListCopy)
-            Swal.fire('Added','To the Compleated List','success')
+            Swal.fire('Completed','Added To the Compleated List','success')
         }
+    }
+
+    function deleteTaskDirect(currIndex){
+        let tempTaskList=[...taskList]
+        tempTaskList.splice(currIndex,1)
+        setTaskList(tempTaskList)
+        Swal.fire('Deleted','Task is Deleted','success');
+        localStorage.setItem("todoList",JSON.stringify(tempTaskList))
     }
 
     function addToCompleatedList(currentIndex) {
@@ -126,7 +130,7 @@ export default function TodoHome() {
                                         <div className='left'>
                                             <h3>{task.title}</h3>
                                             <p>{task.description}</p>
-                                            <p>Completed on : {now.getDate()}-{now.getMonth()}-{now.getFullYear()} at {now.getHours()}:{now.getMinutes()} H</p>
+                                            <p>Completed on : {now.getDate()}-{now.getMonth()+1}-{now.getFullYear()} at {now.getHours()}:{now.getMinutes()} H</p>
                                         </div>
                                         <div className='right'>
                                         <MdDeleteOutline
@@ -147,7 +151,7 @@ export default function TodoHome() {
                                     <div className='right'>
                                         <MdDeleteOutline
                                             className='icon-del'
-                                            onClick={() => deleteTask(index)}
+                                            onClick={() => deleteTaskDirect(index)}
                                         />
                                         <MdDone
                                             key={index}

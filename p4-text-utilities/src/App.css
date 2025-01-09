@@ -1,0 +1,17 @@
+
+body{
+    overflow: hidden;
+}
+.app{
+    height: 100rex;
+}
+.cantainer{
+    display: flex;
+    margin: 0% 20%;
+   
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
