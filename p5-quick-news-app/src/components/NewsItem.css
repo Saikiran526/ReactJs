@@ -1,0 +1,36 @@
+
+.card{
+    display: inline;
+    height: 20rem;
+    width: 20rem;
+    margin: 20px;
+    border: 1px solid black;
+    /* border-radius: 10px; */
+    background-color:white; /*  #E1EACD; */
+    /* border: 1px solid black; */
+}
+.card:hover{
+    box-shadow: 0px 0px 10px black;
+}
+.card-img-top{
+    height: 10rem;
+    width: 20rem;
+
+}
+.card-title{
+    margin: 2px;
+}
+.card-text{
+    margin: 2px;
+}
+.text-part{
+    padding: 5px;
+    text-align: left;
+}
+.btn-more{
+    color: black;
+    text-decoration: none;
+}
+.btn{
+    color: white;
+}

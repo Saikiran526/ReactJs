@@ -8,11 +8,6 @@ export default function TextField(props) {
     var count = 0;
     const [text, setText] = useState('');
 
-    const clearTextArea = () => {
-        setText("");
-
-    }
-
     const copyToClipBord = () => {
         navigator.clipboard.writeText(text);
         toast.success('Copied to Clipbord', {
@@ -73,9 +68,7 @@ export default function TextField(props) {
     }
 
     const removeExtraSpace = () => {
-        console.log(text);
         let tempText = text.split(/[ ]+/).join(' ');
-        console.log(tempText);
         setText(tempText)
         toast.success('🔥 Extra Space removed', {
             // position: "top-right",
@@ -93,7 +86,7 @@ export default function TextField(props) {
         <div className='textFiled-cantainer'>
             <h1>{props.heading}</h1>
             <div>
-                <textarea value={text} onChange={textAreaChanged} onClick={clearTextArea}></textarea>
+                <textarea value={text} onChange={textAreaChanged} ></textarea>
             </div>
             <div className='btn-container'>
                 <button onClick={convertToUppercase}>Upper Case</button>

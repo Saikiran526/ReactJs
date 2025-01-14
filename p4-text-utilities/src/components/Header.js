@@ -20,6 +20,8 @@ export default function Header(props) {
         <h1>Text Utilities</h1>
         <Link to='/' style={{margin:'0px 20px',color:props.mode?'white':'black'}}>Home</Link>
         <Link to='/about' style={{color:props.mode?'white':'black'}}><p>About</p></Link>
+          {/* <p style={{margin:'0px 20px'}}>Home</p>
+          <p style={{margin:'0px 20px'}}>About</p> */}
       </div>
       <div className='right'>
         <div>

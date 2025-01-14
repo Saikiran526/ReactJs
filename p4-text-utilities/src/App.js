@@ -31,7 +31,7 @@ function App() {
             <Route path='/' element={<TextField heading='Enter Texr Below to Analyse' mode={theme} />} />
             <Route path='/about' element={<About />} />
           </Routes>
-
+          {/* <TextField heading='Enter Texr Below to Analyse' mode={theme} /> */}
       </div>
     </div>
     </Router>
