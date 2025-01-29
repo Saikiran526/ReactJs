@@ -5,7 +5,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export default function TextField(props) {
 
-    var count = 0;
     const [text, setText] = useState('');
 
     const copyToClipBord = () => {
@@ -18,7 +17,7 @@ export default function TextField(props) {
             pauseOnHover: false,
             draggable: true,
             progress: undefined,
-            theme: "light",
+            theme: "dark",
         });
     }
 
@@ -32,7 +31,7 @@ export default function TextField(props) {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: "light",
+            theme: "dark",
         });
     }
 
@@ -50,7 +49,7 @@ export default function TextField(props) {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: "light",
+            theme: "dark",
         });
     }
     const convertToLowercase = () => {
@@ -63,7 +62,7 @@ export default function TextField(props) {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: "light",
+            theme: "dark",
         });
     }
 
@@ -78,7 +77,7 @@ export default function TextField(props) {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: "light",
+            theme: "dark",
         });
     }
 
@@ -89,7 +88,7 @@ export default function TextField(props) {
                 <textarea value={text} onChange={textAreaChanged} ></textarea>
             </div>
             <div className='btn-container'>
-                <button onClick={convertToUppercase}>Upper Case</button>
+                <button  onClick={convertToUppercase}>Upper Case</button>
                 <button onClick={convertToLowercase}>Lower Case</button>
                 <button onClick={removeExtraSpace}>Remove Extra space</button>
                 <button onClick={copyToClipBord}>Copy Text</button>
@@ -103,7 +102,7 @@ export default function TextField(props) {
                     rtl={false}
                     pauseOnFocusLoss
                     draggable
-                    theme="light"
+                    theme="dark"
                 />
             </div>
             <div>

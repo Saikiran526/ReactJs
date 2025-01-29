@@ -33,3 +33,7 @@ textarea{
 h3{
     margin: 5px;
 }
+.btn-funs{
+    text-decoration: none;
+    color: white;
+}

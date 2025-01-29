@@ -3,15 +3,17 @@
     width: 100%;
     height: 80px;
     display: flex;
-    justify-content:space-between;
+    justify-content:space-around;
     align-items: center;
-    background-color: #4C585B;
+    background-color: black;
     border-bottom:1px solid black ;
     color: white;
 }
 .left{
+    width: 300px;
     display: flex;
     align-items: center;
+    /* justify-content: center; */
     /* margin: 0px 20px; */
 }
 .right{
@@ -21,7 +23,7 @@
 }
 .search{
     height: 35px;
-    width: 300px;
+    width: 500px;
     margin: 10px 20px;
     padding: 10px;
     outline: none;
@@ -44,4 +46,13 @@
     border: none;
     cursor: pointer;
     color: black;
+}
+.CountryNameSelection {
+    height: 35px;
+    width: 250px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 10px;
+    /* margin: 20px; */
 }

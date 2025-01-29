@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import './Header.css'
 import { FaSearch } from "react-icons/fa";
 import { MdLightMode } from "react-icons/md";
@@ -18,8 +17,8 @@ export default function Header(props) {
     <div className='Header' style={myStyle}>
       <div className='left'>
         <h1>Text Utilities</h1>
-        <Link to='/' style={{margin:'0px 20px',color:props.mode?'white':'black'}}>Home</Link>
-        <Link to='/about' style={{color:props.mode?'white':'black'}}><p>About</p></Link>
+        <Link to='/' style={{margin:'0px 20px',color:props.mode?'white':'black',textDecoration:'none'}}>Home</Link>
+        <Link to='/about' style={{color:props.mode?'white':'black',textDecoration:'none'}}><p>About</p></Link>
           {/* <p style={{margin:'0px 20px'}}>Home</p>
           <p style={{margin:'0px 20px'}}>About</p> */}
       </div>

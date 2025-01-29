@@ -2,9 +2,8 @@ import { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
 import TextField from './components/TextField';
-import { LiaGhostSolid } from 'react-icons/lia';
 import About from './components/About';
-import { BrowserRouter as Router, Route , Routes} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
 
@@ -19,21 +18,22 @@ function App() {
 
   return (
     <Router>
-    <div className='app' style={myStyle}>
-      <Header mode={theme} iColor={iconColor} toggleTheme={() => {
-        setTheme(!theme);
-        setIconColor(iconColor === 'black' ? 'white' : 'black')
-      }
-      } />
-      <div className='cantainer'>
+      <div className='app' style={myStyle}>
+        <Header mode={theme} iColor={iconColor} toggleTheme={() => {
+          setTheme(!theme);
+          setIconColor(iconColor === 'black' ? 'white' : 'black')
+        }
+        } />
+        <div className='cantainer'>
 
           <Routes>
+            <Route path="*" element={<TextField to="/" />} />
             <Route path='/' element={<TextField heading='Enter Texr Below to Analyse' mode={theme} />} />
             <Route path='/about' element={<About />} />
           </Routes>
           {/* <TextField heading='Enter Texr Below to Analyse' mode={theme} /> */}
+        </div>
       </div>
-    </div>
     </Router>
   );
 }

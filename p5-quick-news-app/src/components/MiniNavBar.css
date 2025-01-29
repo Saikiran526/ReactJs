@@ -6,12 +6,14 @@
     width: 100%;
     position: sticky;
     top: 0px;
-    color: black;
-    
 }
 .btn-category{
     color: black;
-    opacity: 0.7;
+    border: none;
+    background-color: transparent;
+}
+.btn-category-darkMode{
+    color: black;
     border: none;
     background-color: transparent;
 }
@@ -19,7 +21,23 @@
     border-bottom: 5px solid black;
     opacity: 1;   
 }
-.active{
+.btn-category-darkMode:hover{
+    border-bottom: 5px solid aqua;
+    opacity: 1;  
+}
+/* .active{
     border-bottom: 5px solid black;
-   
+} */
+.MonoNavvar-darkmode{
+    display: flex;
+    justify-content:space-around;
+    height: 40px;
+    background-color: #4C585B;
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    color: white;
+}
+.MonoNavvar-darkmode button{
+    color: white;
 }
